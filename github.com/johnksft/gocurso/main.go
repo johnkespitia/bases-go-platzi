@@ -3,8 +3,8 @@ package main
 import (
 	"errors"
 	"fmt"
-
-	"github.com/johnksft/gocurso/structs"
+	"time"
+	//"github.com/johnksft/gocurso/structs"
 )
 
 const helloWorld string = " Hola %s %s bienvenido \n"
@@ -18,8 +18,11 @@ func main() {
 		}
 		fmt.Println(res)
 	*/
-	pointerTest()
-	structs.InterfaceTest()
+	//pointerTest()
+	//structs.InterfaceTest()
+	go forGo(300)
+	//go forGo(20)
+	time.Sleep(10000 * time.Millisecond)
 }
 
 func sumaRegular(num1 interface{}, num2 interface{}) (int, error) {
@@ -44,4 +47,14 @@ func pointerTest() {
 	*b = *b * 2
 	fmt.Println(a, *b)
 	fmt.Println(&a, b)
+}
+
+func helloGo(index int) {
+	fmt.Println("Hola Soy un print rn la Go Rutine #", index)
+}
+
+func forGo(n int) {
+	for i := 0; i < n; i++ {
+		go helloGo(i)
+	}
 }
