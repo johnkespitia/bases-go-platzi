@@ -21,7 +21,7 @@ func main() {
 	//pointerTest()
 	//structs.InterfaceTest()
 	go forGo(300)
-	//go forGo(20)
+	go forGo(20)
 	time.Sleep(10000 * time.Millisecond)
 }
 
