@@ -10,12 +10,16 @@ import (
 const helloWorld string = " Hola %s %s bienvenido \n"
 
 func main() {
+	/*
+		structs.InterfaceTest()
+		res, err := sumaRegular(3, 3)
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println(res)
+	*/
+	pointerTest()
 	structs.InterfaceTest()
-	res, err := sumaRegular(3, 3)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(res)
 }
 
 func sumaRegular(num1 interface{}, num2 interface{}) (int, error) {
@@ -29,4 +33,15 @@ func sumaRegular(num1 interface{}, num2 interface{}) (int, error) {
 	}
 
 	return num1.(int) + num2.(int), nil
+}
+
+// pointerTest
+func pointerTest() {
+	var a int = 10
+	var b *int
+	b = &a
+	a = a * 2
+	*b = *b * 2
+	fmt.Println(a, *b)
+	fmt.Println(&a, b)
 }
