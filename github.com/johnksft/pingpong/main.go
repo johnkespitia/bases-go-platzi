@@ -18,8 +18,8 @@ func isPoint() int {
 	}
 }
 
-func score(pointsA *int, pointsB *int) {
-	fmt.Print("Score: Ping: ", *pointsA, " VS Pong: ", *pointsB, "\n")
+func score(pointsA *int, pointsB *int, player1 string, player2 string) {
+	fmt.Print("Score: ",player1,": ", *pointsA, " VS ",player2,": ", *pointsB, "\n")
 }
 
 func ping(ball chan<- int, action chan<- string, player string ) {
@@ -63,7 +63,7 @@ func pingpong() {
 		}
 	}
 	defer func(){
-		score(&pointsA, &pointsB)
+		score(&pointsA, &pointsB,player1,player2)
 		if pointsA > pointsB {
 			fmt.Printf("%s es el Ganador \n",player1)
 		} else {
