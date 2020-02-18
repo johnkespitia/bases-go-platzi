@@ -18,8 +18,8 @@ func main() {
 	fmt.Println("***************************************************************")
 	fmt.Println("**     (°.°)/ Area Calculator                                ")
 	fmt.Println("**     /| |   Al área de la figura es: ",cuadrado.Area,"                    ")
-	fmt.Println("**     /| |   Al Perímetro de la figura es: ",cuadrado.Perimetro,"             ")
-	fmt.Println("**      |||   JohnK Espitia                                  ")
+	fmt.Println("**      |||   Al Perímetro de la figura es: ",cuadrado.Perimetro,"             ")
+	fmt.Println("**            JohnK Espitia                                  ")
 	fmt.Println("***************************************************************")
 }
 
