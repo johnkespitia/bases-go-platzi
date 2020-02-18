@@ -23,7 +23,7 @@ func main() {
 	fmt.Println("***************************************************************")
 }
 
-func crearCuadrado(cuadrado *figura.Cuadrado){
+func crearCuadrado(cuadrado *figura.Cuadrado){ 
 	fmt.Println("Ingrese el Alto")
 	fmt.Scanf("%f", &cuadrado.Alto)
 	fmt.Println("Ingrese el Largo")
